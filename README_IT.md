@@ -30,11 +30,7 @@ Tienili tutti nella stessa cartella, con questi nomi.
 | File | Cos'è |
 |---|---|
 | `offline-character-chat.html` | l'intera app (HTML, CSS, JavaScript) |
-| `avvia-chat.bat` | avvio con doppio clic, solo dal PC |
-| `avvia-chat-rete.bat` | avvio con doppio clic, PC + telefono |
 | `server.py` | server usato da `avvia-chat-rete.bat` |
-| `README_IT.md` | questa guida (in italiano) |
-| `README_EN.md` | la stessa guida in inglese |
 
 Per usare solo il PC bastano l'HTML e `avvia-chat.bat`.
 

@@ -159,6 +159,7 @@ Matita, oppure **+ Nuovo personaggio**.
 | **Assistente** | niente regole di roleplay, temperatura bassa (0.4), codice in blocchi |
 | **Creatore** | modalità speciale: trasforma una descrizione in una scheda personaggio (vedi *Creatore Personaggi*) |
 
+- **Immagine profilo** (facoltativa): premi **Scegli immagine**. L'immagine viene ritagliata al centro in formato 1:1 e ridotta a 128 × 128 pixel (pesa pochi KB), poi compare piccola accanto al nome nei messaggi, nella lista chat, nella lista personaggi e in alto. **Rimuovi** la toglie. Resta salvata nel browser insieme al personaggio, quindi viaggia con esporta, importa e backup.
 - **Descrizione**, **Personalità**, **Scenario**.
 - **Primo messaggio:** più saluti separati da una riga con `---`; il primo è mostrato, gli altri sono varianti.
 - **Regole extra:** istruzioni aggiuntive per il modello.
@@ -212,7 +213,7 @@ Alcuni modelli (per esempio qwen3 o deepseek-r1) possono "ragionare" prima di ri
 
 ### Tua persona
 
-**Memoria e opzioni > Tua persona.** Nome e descrizione di chi sei, valgono per tutte le chat. Se lasci il nome predefinito ("You" in inglese, "Tu" in italiano), al modello arriva come "User". In ogni chat puoi usare un nome diverso (vedi *Nome in questa chat*).
+**Memoria e opzioni > Tua persona.** Nome e descrizione di chi sei, valgono per tutte le chat. Se lasci il nome predefinito ("You" in inglese, "Tu" in italiano), al modello arriva come "User". In ogni chat puoi usare un nome diverso (vedi *Nome in questa chat*). Puoi anche scegliere un'immagine profilo (facoltativa, come per i personaggi): compare accanto al tuo nome nei messaggi.
 
 ### Lingua
 
@@ -290,10 +291,10 @@ Ollama non ricorda nulla tra una richiesta e l'altra: la memoria la gestisce l'a
 
 | Cosa | Come |
 |---|---|
-| **Personaggio** | ✎ sul personaggio > **Esporta**. Solo la scheda, senza chat |
-| **Chat** | ⇩ nella lista chat. Contiene messaggi, varianti, ricordi fissi, riassunto, il nome usato in quella chat e la scheda del personaggio |
+| **Personaggio** | ✎ sul personaggio > **Esporta**. Solo la scheda (con l'immagine profilo), senza chat |
+| **Chat** | ⇩ nella lista chat. Contiene messaggi, varianti, ricordi fissi, riassunto, il nome usato in quella chat e la scheda del personaggio (con l'immagine) |
 | **Lorebook** | **Memoria e opzioni > Lorebook > Esporta lore** |
-| **Tutto** | **Memoria e opzioni > Impostazioni > Esporta backup completo**: personaggi, chat, lorebook, tua persona e impostazioni |
+| **Tutto** | **Memoria e opzioni > Impostazioni > Esporta backup completo**: personaggi, chat, lorebook, tua persona e impostazioni, immagini profilo comprese |
 
 ### Importare
 
@@ -301,7 +302,7 @@ Un solo pulsante, in fondo alla barra sinistra. Puoi scegliere più file insieme
 
 | File | Cosa succede |
 |---|---|
-| **Personaggio** | file dell'app e card JSON in stile SillyTavern (se la card contiene un lorebook, le voci vengono importate). Le card PNG non sono supportate |
+| **Personaggio** | file dell'app e card JSON in stile SillyTavern (se la card contiene un lorebook, le voci vengono importate). Le card PNG non sono supportate. L'immagine profilo viene importata solo dai file di questa app |
 | **Chat** | viene collegata al personaggio con lo stesso nome e descrizione; se non esiste viene creato |
 | **Lorebook** | le voci vengono aggiunte a quelle esistenti |
 | **Backup completo** | **sostituisce** tutti i dati (chiede conferma). L'URL di Ollama del dispositivo non viene cambiato |
@@ -349,7 +350,7 @@ Fai un backup ogni tanto: i dati stanno nel browser ([sezione 12](#12-dove-sono-
 
 ## 14. Limiti noti
 
-Non ci sono ancora: avatar, ramificazione delle conversazioni (branching), più personaggi nella stessa chat, card PNG, tabelle markdown, import del formato nativo di Perchance. I `.bat` sono per Windows; su Mac e Linux usa l'avvio manuale.
+Non ci sono ancora: ramificazione delle conversazioni (branching), più personaggi nella stessa chat, card PNG, tabelle markdown, import del formato nativo di Perchance. I `.bat` sono per Windows; su Mac e Linux usa l'avvio manuale.
 
 ## 15. Funzionamento senza internet
 
@@ -500,3 +501,7 @@ echo.
 echo Il server si e' fermato. Se vedi un errore qui sopra, copialo e mandamelo.
 pause
 ```
+
+![Screenshot 1](Screenshots/screenshot1.png)
+
+![Screenshot 2](Screenshots/screenshot2.png)

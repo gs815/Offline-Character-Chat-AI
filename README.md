@@ -159,6 +159,7 @@ Pencil, or **+ New character**.
 | **Assistant** | no roleplay rules, low temperature (0.4), code in blocks |
 | **Creator** | special mode: turns a description into a character card (see *Character Creator*) |
 
+- **Profile picture** (optional): press **Choose image**. The picture is cropped to the centre as 1:1 and shrunk to 128 × 128 pixels (a few KB), then it appears small next to the name in messages, in the chat list, in the character list and at the top. **Remove** takes it away. It stays saved in the browser with the character, so it travels with export, import and backup.
 - **Description**, **Personality**, **Scenario**.
 - **First message:** several greetings separated by a line with `---`; the first is shown, the others are variants.
 - **Extra rules:** additional instructions for the model.
@@ -212,7 +213,7 @@ Some models (for example qwen3 or deepseek-r1) can "reason" before answering. Th
 
 ### Your persona
 
-**Memory & options > Your persona.** Name and description of who you are, valid for all chats. If you leave the default name ("You" in English, "Tu" in Italian), the model receives it as "User". In each chat you can use a different name (see *Your name in this chat*).
+**Memory & options > Your persona.** Name and description of who you are, valid for all chats. If you leave the default name ("You" in English, "Tu" in Italian), the model receives it as "User". In each chat you can use a different name (see *Your name in this chat*). You can also choose a profile picture (optional, as for characters): it appears next to your name in messages.
 
 ### Language
 
@@ -290,10 +291,10 @@ Ollama remembers nothing between requests: the app handles memory.
 
 | What | How |
 |---|---|
-| **Character** | ✎ on the character > **Export**. Only the card, without chats |
-| **Chat** | ⇩ in the chat list. Contains messages, variants, pinned facts, summary, your name in that chat and the character's card |
+| **Character** | ✎ on the character > **Export**. Only the card (with its profile picture), without chats |
+| **Chat** | ⇩ in the chat list. Contains messages, variants, pinned facts, summary, your name in that chat and the character's card (with its picture) |
 | **Lorebook** | **Memory & options > Lorebook > Export lore** |
-| **Everything** | **Memory & options > Settings > Export full backup**: characters, chats, lorebook, your persona and settings |
+| **Everything** | **Memory & options > Settings > Export full backup**: characters, chats, lorebook, your persona and settings, profile pictures included |
 
 ### Importing
 
@@ -301,7 +302,7 @@ A single button, at the bottom of the left sidebar. You can pick several files a
 
 | File | What happens |
 |---|---|
-| **Character** | files from this app and SillyTavern-style JSON cards (if the card contains a lorebook, its entries are imported). PNG cards are not supported |
+| **Character** | files from this app and SillyTavern-style JSON cards (if the card contains a lorebook, its entries are imported). PNG cards are not supported. The profile picture is only imported from this app's own files |
 | **Chat** | it is linked to the character with the same name and description; if it does not exist it is created |
 | **Lorebook** | the entries are added to the existing ones |
 | **Full backup** | **replaces** all data (asks for confirmation). The device's Ollama URL is not changed |
@@ -349,7 +350,7 @@ Make a backup now and then: your data lives in the browser ([section 12](#12-whe
 
 ## 14. Known limits
 
-Not available yet: avatars, conversation branching, several characters in the same chat, PNG cards, markdown tables, import of Perchance's native format. The `.bat` files are for Windows; on Mac and Linux use the manual start.
+Not available yet: conversation branching, several characters in the same chat, PNG cards, markdown tables, import of Perchance's native format. The `.bat` files are for Windows; on Mac and Linux use the manual start.
 
 ## 15. Working without internet
 
@@ -500,3 +501,7 @@ echo.
 echo The server has stopped. If you see an error above, copy it and send it to me.
 pause
 ```
+
+![Screenshot 1](Screenshots/screenshot1.png)
+
+![Screenshot 2](Screenshots/screenshot2.png)
